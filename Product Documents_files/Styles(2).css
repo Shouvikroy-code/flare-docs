@@ -1,0 +1,1699 @@
+/*<meta />*/
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+:root
+{
+	--Brand1: #141d41;
+	--Brand2: #008FD5;
+	--Dark: #BBBDBF;
+	--Medium: #6D67D9;
+	--Light: #F1F2F2;
+	--Black: #000;
+	--White: #ffffff;
+	--Regular: #45494C;
+	--Footer: #0A233F;
+	/*different to the UX guidelines 008FD5*/
+	--Note: #0A233F;
+	--Example: #008FD5;
+	--Warning: #F4793B;
+	/*different to the UX guidelines 252626*/
+	--Links: #209AF3;
+	--Visited: #0072AA;
+	/*--font: Roboto;*/
+}
+
+@font-face 
+{
+	font-family: "Roboto";
+	src: url(../Fonts/Roboto.ttf);
+}
+
+body
+{
+	color: var(--Regular);
+	border-bottom-color: var(--Black);
+	border-color: var(--Black);
+	border: 2px;
+	font-family: "Roboto";
+}
+
+.body-container
+{
+	padding-left: 2%;
+	padding-top: 2%;
+}
+
+/* Headings */
+
+h1
+{
+	font-weight: 500;
+	font-size: 40px;
+	color: var(--Brand2);
+	line-height: 48px;
+}
+
+h1.TOC
+{
+	font-weight: 500;
+	font-size: 40px;
+	color: var(--Brand2);
+	line-height: 48px;
+}
+
+h1.Index
+{
+	font-weight: 500;
+	font-size: 40px;
+	color: var(--Brand2);
+	line-height: 48px;
+}
+
+h1.Other
+{
+	font-weight: 500;
+	font-size: 40px;
+	color: var(--Brand2);
+	line-height: 48px;
+}
+
+h1.Relnotes	/*user in release notes only*/
+{
+	font-weight: 500;
+	font-size: 36px;
+	color: var(--Brand2);
+	line-height: 48px;
+	mc-heading-level: 1;
+	mc-auto-number-position: none;
+	page-break-before: avoid;
+}
+
+h2
+{
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 38px;
+	color: var(--Brand1);
+}
+
+h2.Other
+{
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 38px;
+	color: var(--Brand1);
+}
+
+h3
+{
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 34px;
+	color: var(--Brand1);
+}
+
+h4
+{
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	color: var(--Brand1);
+}
+
+h5
+{
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	color: var(--Brand1);
+}
+
+h6
+{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	color: var(--Brand1);
+}
+
+/* Content */
+
+p
+{
+	/*different to the UX guidelines 16px*/
+	font-size: 15px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	line-height: 19px;
+	letter-spacing: 0.25px;
+	font-family: "Roboto";
+}
+
+p.Indented
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+	margin-left: 20px;
+	font-family: "Roboto";
+}
+
+p.updated
+{
+	font-family: "Roboto";
+	font-size: 12px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-weight: 700;
+	line-height: 19px;
+	letter-spacing: 0.25px;
+	vertical-align: bottom;
+}
+
+/*Special Text*/
+
+.HRL
+{
+	background-color: var(--Dark);
+}
+
+/*copyright*/
+
+p.CopyrightHeading
+{
+	page-break-before: always;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 4px;
+	color: var(--Brand2);
+}
+
+p.Copyright
+{
+	font-size: 16px;
+	line-height: 12px;
+	padding-bottom: 1px;
+	padding-top: 1px;
+	color: var(--Brand2);
+}
+
+p.CopyrightAddress
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	font-size: 12px;
+	line-height: 14px;
+}
+
+/*Table Text*/
+/*added 03-11-24 to set the following table properties per ux recommendations- not doing*/
+
+/*p.table-head
+{
+	font-size: 16px;
+	text-align: center;
+	font-weight: 500;
+}*/
+
+p.table-text
+{
+	font-size: 15px;
+}
+
+/* Lists*/
+
+ol
+{
+	line-height: 19px;
+	letter-spacing: .25px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 16px;
+	padding-left: 0px;
+}
+
+ol p	/*Geo - do I need this style since I have ol defined above*/
+{
+	line-height: 19px;
+	letter-spacing: .25px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+ol ol
+{
+	line-height: 19px;
+	list-style-type: lower-alpha;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+ol ol ol
+{
+	list-style-type: lower-roman;
+	line-height: 19px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-left: 12px;
+}
+
+ol ul
+{
+	list-style-type: disc;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	line-height: 19px;
+	margin-left: -4px;
+}
+
+ol ul ul
+{
+	list-style-type: circle;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	line-height: 19px;
+}
+
+ol ul ul ul
+{
+	list-style-image: none;
+	list-style-type: circle;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	line-height: 19px;
+}
+
+ul
+{
+	list-style-type: square;
+	line-height: 19px;
+	letter-spacing: .25px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding-left: 20px;
+	margin-left: -4px;
+}
+
+ul p	/*Geo - do I need this style since I have ul defined above*/
+{
+	line-height: 19px;
+	letter-spacing: .25px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+ul ul
+{
+	list-style-type: disc;
+	line-height: 19px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-left: -4px;
+}
+
+ul ul ul
+{
+	list-style-type: circle;
+	line-height: 19px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+ul ul ul ul
+{
+	list-style-type: circle;
+	line-height: 19px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+ul ol
+{
+	list-style-type: lower-alpha;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	line-height: 19px;
+}
+
+li
+{
+	orphans: 2;
+	widows: 2;
+	line-height: 19px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	font-size: 15px;
+}
+
+li p	/*Geo - do I need this style since I have ul defined above*/
+{
+	margin-bottom: 20px;
+	margin-top: 20px;
+	line-height: 19px;
+}
+
+ul.indented
+{
+	margin-left: 16px;
+	padding-left: 16px;
+}
+
+/*Definition Lists. Not currently in use and have to be reformatted based on need*/
+
+dl
+{
+	padding: 0;
+	border-bottom: solid 1px #000000;
+	line-height: 19px;
+	font-size: 14pt;
+	letter-spacing: .25px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+dl dt,
+dt
+{
+	clear: left;
+	float: left;
+	width: 200px;
+	margin: 0;
+	padding-left: 1px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-right: 1px;
+	border-top: solid 1px #000000;
+	font-weight: bold;
+}
+
+dd p,
+dt p
+{
+	margin: 0;
+}
+
+dl dd,
+dd
+{
+	margin: 0;
+	padding-left: 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 1px;
+	border-top: solid 1px #d0d3d5;
+	margin-left: 24px;
+}
+
+dt + dd
+{
+	border-top: solid 1px #000000;
+}
+
+/*Notes, Warnings, Examples*/
+
+div.note
+{
+	line-height: 19px;
+	padding-right: 10px;
+	margin: 20px 10px 20px 0;
+	letter-spacing: .25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-position: 10px 25px;
+	padding-left: 16px;
+	border-top-color: var(--Brand2);
+	border: solid 2px var(--Brand1);
+}
+
+div.note > p:first-child
+{
+	mc-auto-number-class: setoff;
+	mc-auto-number-format: '{b}{color #141d41}Note {/color}{/b}';
+}
+
+div.warning
+{
+	line-height: 19px;
+	padding-right: 10px;
+	margin: 20px 10px 20px 0;
+	letter-spacing: .25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-position: 10px 25px;
+	border: solid 2px var(--Warning);
+	padding-left: 20px;
+}
+
+div.warning > p:first-child
+{
+	mc-auto-number-format: '{b}{color #F4793B}Warning {/color}{/b}';
+	mc-auto-number-class: setoff;
+}
+
+div.Example
+{
+	line-height: 19px;
+	padding-right: 10px;
+	margin: 20px 10px 20px 0;
+	letter-spacing: .25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-position: 10px 25px;
+	border: solid 2px var(--Brand2);
+	padding-left: 20px;
+}
+
+div.Example > p:first-child
+{
+	mc-auto-number-format: '{b}{color #008FD5}Example {/color}{/b}';
+	mc-auto-number-class: setoff;
+}
+
+span.setoff
+{
+	letter-spacing: 0.25px;
+	text-transform: uppercase;
+}
+
+/*Images*/
+
+img
+{
+	border: none;
+	max-width: 100%;
+}
+
+img.screen
+{
+	mc-thumbnail: popup;
+	mc-thumbnail-max-height: auto;
+	mc-thumbnail-max-width: 225px;
+}
+
+/*img.screenindented
+{
+	mc-thumbnail: popup;
+	mc-thumbnail-max-height: auto;
+	mc-thumbnail-max-width: 225px;
+	margin-left: 0in;
+	max-width: 590px;
+	padding: 0pt;
+	padding-left: 0.25in;
+}
+*/
+
+img.ReduceButtonSize
+{
+	max-height: 24px;
+	max-width: 24px;
+}
+
+/* Links */
+
+a:link
+{
+	color: var(--Links);
+}
+
+a:visited
+{
+	color: var(--Visited);
+}
+
+MadCap|dropDown
+{
+	border-bottom: 1px solid var(--Light);
+	mc-image-position: left;
+	mc-image-spacing: 10px;
+	mc-open-image: url('../Images/Minus.png');
+	mc-closed-image: url('../Images/Plus.png');
+	padding: 10px 0;
+	mc-expandable: false;
+}
+
+MadCap|dropDownBody
+{
+	padding: 10px 30px 0;
+}
+
+MadCap|dropDownHotspot
+{
+	cursor: hand;
+	text-decoration: none;
+	color: var(--Links);
+	font-size: 15px;
+	font-weight: 400;
+	border-bottom: none;
+}
+
+MadCap|expandingBody
+{
+	color: var(--Regular);
+	font-style: italic;
+}
+
+MadCap|expandingHead
+{
+	font-style: italic;
+	font-weight: normal;
+	cursor: hand;
+	text-decoration: none;
+	color: var(--Links);
+}
+
+MadCap|xref
+{
+	font-weight: bold;
+	text-decoration: underline;
+	color: var(--Links);
+	mc-format: '{quote}{para}{quote}';
+}
+
+MadCap|miniTocProxy
+{
+	border-top-width: 0px;
+	margin-left: 0.25in;
+	margin-right: 0.25in;
+	padding-left: 0px;
+	border-top-width: 1px;
+	border-top-style: none;
+	mc-toc-depth: 1;
+	text-decoration: none;
+	margin-top: 5px;
+	padding-top: 0px;
+}
+
+MadCap|miniTocProxy.Next
+{
+	border-top-width: 0px;
+	margin-left: 0.25in;
+	margin-right: 0.25in;
+	padding-left: 0px;
+	border-top-width: 1px;
+	border-top-style: none;
+	mc-toc-depth: 1;
+	text-decoration: none;
+}
+
+p.MiniTOC1
+{
+	font-size: 15px;
+	line-height: 19px;
+	margin-left: 24px;
+	margin-right: 24px;
+	mc-hyphenate: never;
+	color: var(--Links);
+	text-decoration: underline;
+}
+
+a.MiniTOC1:link
+{
+	color: var(--Links);
+}
+
+a.MiniTOC1:visited
+{
+	color: var(--Links);
+}
+
+/* Home page topic */
+
+div.home-layout
+{
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+}
+
+div.home-section
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0%;
+	padding-bottom: 0%;
+	border-bottom-style: none;
+	border-bottom-width: 0px;
+}
+
+div.home-tiles	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.home-tiles::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.home-tiles::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.home-tiles > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: var(--Brand2);
+	padding: 2%;
+}
+
+div.home-tiles > div:nth-child(1)
+{
+	width: 48%;
+	margin-left: 0%;
+}
+
+div.home-tiles > div:nth-child(2)
+{
+	width: 48%;
+	margin-left: 4%;
+}
+
+div.home-tiles-layout	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.home-tiles-layout::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.home-tiles-layout::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.home-tiles-layout > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.home-tiles-layout > div:nth-child(1)
+{
+	width: 33.33333%;
+	margin-left: 0%;
+}
+
+div.home-tiles-layout > div:nth-child(2)
+{
+	width: 66.66667%;
+	margin-left: 0%;
+}
+
+div.home-tiles-layout p
+{
+	line-height: 1.2;
+}
+
+div.quick-links	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.quick-links::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.quick-links::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.quick-links > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.quick-links > div:nth-child(1)
+{
+	width: 16.66666%;
+	margin-left: 2%;
+}
+
+div.quick-links > div:nth-child(2)
+{
+	width: 16.66666%;
+	margin-left: 3%;
+}
+
+div.quick-links > div:nth-child(3)
+{
+	width: 16.66666%;
+	margin-left: 3%;
+}
+
+div.quick-links > div:nth-child(4)
+{
+	width: 16.66666%;
+	margin-left: 3%;
+}
+
+div.quick-links > div:nth-child(5)
+{
+	width: 16.66666%;
+	margin-left: 3%;
+}
+
+div.quick-links *	/*Text-align center set to all elements within div.quick-links*/
+{
+	text-align: center;
+}
+
+div.topic-hero
+{
+	background-image: none;
+	background-size: cover;
+	background-attachment: scroll;
+	padding-bottom: 0.5%;
+	padding-top: 2%;
+	padding-right: 2%;
+	padding-left: 2%;
+}
+
+div.topic-hero h1
+{
+	font-family: "Roboto";
+	color: var(--Brand1);
+	font-size: 40px;
+	text-align: left;
+	font-weight: 500;
+}
+
+html.home-topic	/*Used on home topic to override padding set in the skin*/
+{
+	
+}
+
+html.home-topic .body-container	/*Overrides padding set in the skin*/
+{
+	padding: 0;
+}
+
+html.home-topic .main-section > .outer-row	/*Overrides padding set in the skin when in tablet/mobile*/
+{
+	max-width: 100%;
+	padding: 0;
+}
+
+/* Master page */
+
+nav.title-bar
+{
+	padding: 10px 0;
+	/*line-height: inherit;*/
+	display: block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #0a233f;
+	height: 47px;
+}
+
+MadCap|searchBarProxy
+{
+	border-bottom: 1px;
+}
+
+MadCap|breadcrumbsProxy
+{
+	color: var(--Regular);
+	mc-breadcrumbs-count: 6;
+	font-size: 12px;
+	line-height: 19px;
+}
+
+div.MCBreadcrumbsBox_0
+{
+	padding-top: 1%;
+	width: 80%;
+	border-bottom-width: 1px;
+	border-bottom-style: none;
+	border-bottom-color: black;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.product
+{
+	color: var(--Brand2);
+	font-family: "Roboto";
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 19px;
+}
+
+.ver
+{
+	font-family: "Roboto";
+	color: var(--Footer);
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 19px;
+}
+
+select#version
+{
+	float: right;
+	margin: 10px 10px 10px 10px;
+	justify-content: space-between;
+	align-items: center;
+	align-self: stretch;
+	border: 1px solid var(--buttons-button-border, rgba(0, 0, 0, 0.08));
+	background: var(--buttons-secondary-secondary-button-bg, linear-gradient(180deg, rgba(		0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.02) 100%), #F5F5F5);
+}
+
+div.home-footer
+{
+	/*added 03-11-24 to set the following table properties per ux recommendations*/
+	position: fixed;
+	/*position: relative;*/
+	width: 100%;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-bottom: 0;
+	padding-top: 0;
+	padding: 0 1%;
+	bottom: 0;
+}
+
+p.footer
+{
+	font-family: "Roboto";
+	font-size: 13px;
+	color: var(--White);
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	margin: 5px;
+}
+
+p.footer-sub
+{
+	color: var(--White);
+	text-decoration: underline;
+	text-align: center;
+}
+
+/*Side Nav Images*/
+
+.home > a::before
+{
+	content: "";
+	display: block;
+	background: url("../Images/home.png") no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0px 10px 0px 0px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+}
+
+.sysreqs > a::before
+{
+	content: "";
+	display: block;
+	background: url("../Images/sysreqs.png") no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0px 10px 0px 0px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+}
+
+.whatsnew > a::before
+{
+	content: "";
+	display: block;
+	background: url("../Images/whats_new.png") no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0px 10px 0px 0px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+}
+
+.releasenotes > a::before
+{
+	content: "";
+	display: block;
+	background: url("../Images/releasenotes.png") no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0px 10px 0px 0px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+}
+
+.supportdocs > a::before
+{
+	content: "";
+	display: block;
+	background: url("../Images/supportdocs.png") no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0px 10px 0px 0px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+}
+
+.dwdocs > a::before
+{
+	content: "";
+	display: block;
+	background: url("../Images/dw.png") no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0px 10px 0px 0px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+}
+
+.faqs > a::before
+{
+	content: "";
+	display: block;
+	background: url("../Images/faqs.png") no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0px 10px 0px 0px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+}
+
+.tips > a::before
+{
+	content: "";
+	display: block;
+	background: url("../Images/tips.png") no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0px 10px 0px 0px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+}
+
+.proddocs > a::before
+{
+	content: "";
+	display: block;
+	background: url("../Images/proddocs.png") no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0px 10px 0px 0px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+}
+
+.videos > a::before
+{
+	content: "";
+	display: block;
+	background: url("../Images/videos.png") no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0px 10px 0px 0px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+}
+
+.issues > a::before
+{
+	content: "";
+	display: block;
+	background: url("../Images/issues.png") no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0px 10px 0px 0px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+}
+
+@media print
+{
+	/*TOCs*/
+
+	p.TOC1
+	{
+		font-family: "Roboto";
+		text-transform: uppercase;
+		font-size: 16px;
+		line-height: 19px;
+		page-break-after: avoid;
+		font-weight: Bold;
+		margin-bottom: 6px;
+		margin-top: 6px;
+		mc-hyphenate: never;
+		mc-pagenum-display: all;
+	}
+
+	p.TOC2
+	{
+		font-family: "Roboto";
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 19px;
+		margin-left: 12px;
+		mc-hyphenate: never;
+	}
+
+	p.TOC3
+	{
+		font-family: "Roboto";
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 19px;
+		margin-left: 18px;
+		mc-hyphenate: never;
+	}
+
+	MadCap|miniTocProxy
+	{
+		font-family: "Roboto";
+		text-decoration: none;
+		margin-left: 0.25in;
+		margin-right: 0.25in;
+		clear: none;
+		border-top-color: #008fd5;
+		border: solid 2px;
+		border-color: #008fd5;
+		color: #209af3;
+		mc-toc-depth: 2;
+		padding: 10px;
+		padding-bottom: 10px;
+	}
+
+	MadCap|miniTocProxy.Next
+	{
+		font-family: "Roboto";
+		text-decoration: none;
+		margin-left: 0.25in;
+		margin-right: 0.25in;
+		clear: none;
+		border-top-color: #008fd5;
+		padding-bottom: 20px;
+		border: solid 2px;
+		border-color: #008fd5;
+		color: #209af3;
+		mc-toc-depth: 3;
+	}
+
+	p.MiniTOC1
+	{
+		font-family: "Roboto";
+		font-size: 15px;
+		line-height: 19px;
+		margin-left: 24px;
+		margin-right: 24px;
+		mc-hyphenate: never;
+		color: var(--Links);
+		text-decoration: none;
+	}
+
+	/*title pages*/
+
+	p.BookTitle
+	{
+		font-weight: 500;
+		font-size: 40px;
+		color: var(--Brand2);
+		line-height: 48px;
+		margin: 0px;
+		mc-hyphenate: never;
+	}
+
+	p.BookSubTitle
+	{
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 38px;
+		margin: 0px 0px;
+		mc-hyphenate: never;
+	}
+
+	p.BookRelVersionDate
+	{
+		margin-left: 2in;
+		margin-top: 8px;
+		font-weight: 500;
+		font-size: 16px;
+	}
+
+	/*copyright*/
+
+	p.CopyrightHeading
+	{
+		page-break-before: always;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 4px;
+		color: var(--Brand2);
+	}
+
+	p.Copyright
+	{
+		font-size: 16px;
+		line-height: 4px;
+		color: var(--Brand2);
+	}
+
+	p.CopyrightAddress
+	{
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+		padding-top: 0px;
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	/* Indexes*/
+
+	MadCap|indexProxy
+	{
+		border-top: none;
+	}
+
+	MadCap|indexProxy.Column2
+	{
+		mc-column-count: 2;
+		mc-index-headings: true;
+	}
+
+	p.IndexHeading
+	{
+		font-size: 15px;
+		padding-top: 16px;
+		text-align: left;
+	}
+
+	p.IndexPrintHead
+	{
+		color: var(--Brand2);
+		page-break-before: always;
+		mc-heading-level: 4;
+	}
+
+	p.Index1
+	{
+		margin-bottom: 4px;
+		margin-top: 4px;
+	}
+
+	p.Index2
+	{
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	/* Links */
+
+	MadCap|xref
+	{
+		mc-format: '{quote}{para}{quote} {pageref}';
+		font-weight: bold;
+		text-decoration: underline;
+		color: #209af3;
+	}
+
+	/* Print Lists */
+
+	dd,
+	dd p,
+	dt,
+	dt p,
+	dl,
+	ol
+	{
+		line-height: 19px;
+		letter-spacing: .25px;
+		margin-bottom: 8px;
+		margin-top: 8px;
+		margin-left: 24px;
+	}
+
+	ol p
+	{
+		line-height: 19px;
+		letter-spacing: .25px;
+		margin-bottom: 8px;
+		margin-top: 8px;
+	}
+
+	ol ol
+	{
+		line-height: 19px;
+		list-style-type: lower-alpha;
+		margin-bottom: 8px;
+		margin-top: 8px;
+		margin-left: 22px;
+	}
+
+	ol ol ol
+	{
+		list-style-type: lower-roman;
+		line-height: 19px;
+		margin-bottom: 8px;
+		margin-top: 8px;
+		margin-left: 16px;
+	}
+
+	ol ul
+	{
+		list-style-type: disc;
+		margin-bottom: 8px;
+		margin-top: 8px;
+		line-height: 19px;
+		margin-left: 16px;
+	}
+
+	ol ul ul
+	{
+		list-style-type: circle;
+		margin-left: 16px;
+		margin-bottom: 8px;
+		margin-top: 8px;
+		line-height: 19px;
+	}
+
+	ol ul ul ul
+	{
+		list-style-image: none;
+		list-style-type: circle;
+		margin-bottom: 8px;
+		margin-top: 8px;
+		line-height: 19px;
+		margin-left: 16px;
+	}
+
+	ul
+	{
+		list-style-type: square;
+		line-height: 19px;
+		letter-spacing: .25px;
+		margin-bottom: 8px;
+		margin-top: 8px;
+		padding-left: 0px;
+		margin-left: 22px;
+	}
+
+	ul p
+	{
+		line-height: 19px;
+		letter-spacing: .25px;
+		margin-bottom: 8px;
+		margin-top: 8px;
+	}
+
+	ul ul
+	{
+		list-style-type: disc;
+		line-height: 19px;
+		margin-bottom: 8px;
+		margin-top: 8px;
+		margin-left: 16px;
+	}
+
+	ul ul ul
+	{
+		list-style-type: circle;
+		margin-left: 16px;
+		line-height: 19px;
+		margin-bottom: 8px;
+		margin-top: 8px;
+	}
+
+	ul ol
+	{
+		list-style-type: lower-alpha;
+		line-height: 19px;
+		margin-bottom: 8px;
+		margin-top: 8px;
+		margin-left: 24px;
+	}
+
+	li
+	{
+		widows: 2;
+		line-height: 19px;
+		margin-bottom: 8px;
+		margin-top: 8px;
+		orphans: 3;
+	}
+
+	li p
+	{
+		margin-bottom: 20px;
+		margin-top: 20px;
+		line-height: 19px;
+	}
+
+	ul.indented
+	{
+		padding-left: 20px;
+	}
+
+	/*Headings*/
+
+	h1
+	{
+		mc-auto-number-offset: 0;
+		mc-auto-number-format: 'Chapter {chapnum}: ';
+		mc-heading-level: 1;
+		mc-pagenum-display: all;
+	}
+
+	h1.TOC
+	{
+		mc-heading-level: 1;
+		page-break-before: avoid;
+		mc-auto-number-position: inside-head;
+		mc-leader-align: right;
+		mc-pagenum-display: all;
+	}
+
+	h1.Index
+	{
+		mc-heading-level: 1;
+		mc-auto-number-position: none;
+	}
+
+	h1.Other
+	{
+		mc-auto-number-position: none;
+		mc-heading-level: 0;
+	}
+
+	h2.Other
+	{
+		mc-heading-level: 0;
+		mc-auto-number-position: none;
+	}
+
+	h4
+	{
+		mc-heading-level: 0;
+	}
+
+	h5
+	{
+		mc-heading-level: 0;
+	}
+
+	h6
+	{
+		mc-heading-level: 0;
+	}
+
+	/*page footer*/
+
+	p.footer
+	{
+		font-family: "Roboto";
+		font-size: 13px;
+		color: var(--Black);
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		margin-top: 5px;
+		margin: 5px;
+	}
+
+	label
+	{
+		background-color: #a1a1a1;
+	}
+
+	p
+	{
+		orphans: 3;
+		widows: 3;
+	}
+
+	td
+	{
+		orphans: 3;
+		widows: 3;
+	}
+
+	ol
+	{
+		orphans: 3;
+		widows: 3;
+	}
+
+	*
+	{
+		mc-hyphenate: never;
+		mc-short-line-method: tighten-loosen;
+		mc-short-line: 4;
+	}
+
+	MadCap|dropDownHotspot
+	{
+		orphans: 3;
+		widows: 3;
+	}
+
+	MadCap|dropDown
+	{
+		widows: 3;
+		orphans: 3;
+	}
+}
+
+@media only screen and (max-device-width: 1279px)
+{
+	/* Home page topic */
+
+	div.home-tiles > div:nth-child(1)
+	{
+		width: 49%;
+		margin-left: 0%;
+	}
+
+	div.home-tiles > div:nth-child(2)
+	{
+		width: 49%;
+		margin-left: 2%;
+	}
+
+	div.home-tiles-layout > div:nth-child(1)
+	{
+		width: 40%;
+		margin-left: 30%;
+	}
+
+	div.home-tiles-layout > div:nth-child(2)
+	{
+		width: 90%;
+		margin-left: 5%;
+	}
+
+	div.quick-links > div:nth-child(1)
+	{
+		width: 24%;
+		margin-left: 0%;
+	}
+
+	div.quick-links > div:nth-child(2)
+	{
+		width: 24%;
+		margin-left: 14%;
+	}
+
+	div.quick-links > div:nth-child(3)
+	{
+		width: 24%;
+		margin-left: 14%;
+	}
+
+	div.quick-links > div:nth-child(4)
+	{
+		width: 24%;
+		margin-left: 19%;
+	}
+
+	div.quick-links > div:nth-child(5)
+	{
+		width: 24%;
+		margin-left: 14%;
+	}
+
+	html.home-topic .body-container
+	{
+		margin-left: 0;
+	}
+}
+
+@media only screen and (max-device-width: 767px)
+{
+	/* Home page topic */
+
+	div.home-tiles > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.home-tiles > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+		margin-top: 5%;
+	}
+
+	div.home-tiles-layout p
+	{
+		line-height: 1.2;
+	}
+
+	div.quick-links > div:nth-child(1)
+	{
+		width: 49%;
+		margin-left: 0;
+	}
+
+	div.quick-links > div:nth-child(2)
+	{
+		width: 49%;
+		margin-left: 2%;
+	}
+
+	div.quick-links > div:nth-child(3)
+	{
+		width: 49%;
+		margin-left: 0;
+	}
+
+	div.quick-links > div:nth-child(4)
+	{
+		width: 49%;
+		margin-left: 2%;
+	}
+
+	div.quick-links > div:nth-child(5)
+	{
+		width: 49%;
+		margin-left: 25.5%;
+	}
+}
+
+MadCap|miniTocProxy.Next
+{
+	list-style-type: square;
+}
+
+MadCap|xref.AboutpgNo
+{
+	mc-format: '{page}';
+}
+
+MadCap|xref.AboutChapterName
+{
+	mc-format: '{h1}';
+}
+
+.watch-icon
+{
+	position: absolute;
+	top: 40px;
+	/* Increased from 10px to 40px */
+	right: 10px;
+	font-size: 24px;
+	cursor: pointer;
+	color: #0078D4;
+	/* Soft blue */
+}
+
+.watch-icon:hover
+{
+	color: #005A9E;
+	/* Darker blue on hover */
+}
+
+.watch-dropdown
+{
+	position: absolute;
+	top: 40px;
+	right: 10px;
+	background-color: white;
+	border: 1px solid #ccc;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+	z-index: 1000;
+	font-family: Arial, sans-serif;
+}
+
+.watch-dropdown ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.watch-dropdown li
+{
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+.watch-dropdown li:hover
+{
+	background-color: #f0f0f0;
+}
+
+.watch-popup
+{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	border: 1px solid #ccc;
+	padding: 20px;
+	z-index: 2000;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	font-family: Arial, sans-serif;
+	width: 300px;
+	/* Optional: control width */
+	max-width: 90%;
+}
+
