@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smartsheet Row Adder</title>
+</head>
+<body>
+    <h2>Add a Row to Smartsheet</h2>
+    <form id="smartsheetForm">
+        <label>Name: <input type="text" id="name" required></label><br><br>
+        <label>Email: <input type="email" id="email" required></label><br><br>
+        <label>Topic: <input type="text" id="topic" required></label><br><br>
+        <label>Page URL: <input type="url" id="pageurl" required></label><br><br>
+        <label>Status: <input type="text" id="status" required></label><br><br>
+        <label>Snapshot: <input type="text" id="snapshot" required></label><br><br>
+        <label>Timestamp: <input type="text" id="timestamp" required></label><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="response"></p>
+
+    <script>
+        document.getElementById("smartsheetForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const data = {
+                toBottom: true,
+                cells: [
+                    { columnId: 5861183523082116, value: document.getElementById("name").value },
+                    { columnId: 3609383709396868, value: document.getElementById("email").value },
+                    { columnId: 8112983336767364, value: document.getElementById("topic").value },
+                    { columnId: 794633942290308, value: document.getElementById("pageurl").value },
+                    { columnId: 6503489439747972, value: document.getElementById("status").value },
+                    { columnId: 8197776728608644, value: document.getElementById("snapshot").value },
+                    { columnId: 7226713278467972, value: document.getElementById("timestamp").value }
+                ]
+            };
+
+            fetch("https://api.smartsheet.com/2.0/sheets/rFWGWWPMH7q29cqWcx4C3VvCmq7J4HPJph98MGj1/rows", {
+                method: "POST",
+                headers: {
+                    "Authorization": "Bearer 7CRwQ1P2GvPfQhTnwiroRPy6WavKC4QLqRxkA",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify([data])
+            })
+            .then(response => response.json())
+            .then(result => {
+                document.getElementById("response").innerText = "Response: " + JSON.stringify(result, null, 2);
+            })
+            .catch(error => {
+                document.getElementById("response").innerText = "Error: " + error;
+            });
+        });
+    </script>
+</body>
+</html>
