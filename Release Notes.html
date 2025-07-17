@@ -24,24 +24,7 @@
         <link href="./Release Notes_files/Styles(2).css" rel="stylesheet" type="text/css">
         <style>/*&lt;meta /&gt;*/
 
-.button.thumbs-up-button
-{
-	-pie-background: url('../../Skins/Default/Stylesheets/Images/thumbsup.png') no-repeat center center, linear-gradient(transparent, transparent);
-}
-
-.button.thumbs-down-button
-{
-	-pie-background: url('../../Skins/Default/Stylesheets/Images/thumbsdown.png') no-repeat center center, linear-gradient(transparent, transparent);
-}
-
-.button.print-button
-{
-	-pie-background: linear-gradient(transparent, transparent);
-}
-
-.needs-pie
-{
-	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+ url('../../Resources/Scripts/PIE-no-motw.htc');
 }
 
 </style>
@@ -217,27 +200,7 @@
 			document.getElementById("watch-popup").style.display = "none";
 			}
 
-			function submitWatch() {
-			var pageURL = encodeURIComponent(window.location.href);
-			var pageTitle = encodeURIComponent(document.title);
-			var name = encodeURIComponent(document.getElementById("watch-name").value);
-			var email = encodeURIComponent(document.getElementById("watch-email").value);
-
-			if (!name || !email) {
-			alert("Please enter both name and email.");
-			return;
-			}
-
 			
-			var formURL = "https://script.google.com/macros/s/AKfycbwy2O8giPIGnSOVQUTpAGTyP-FEd6MRbnFt6ESXIX2XIP1mNhyKCJaJ2qAeEUzqLJ0eVw/exec" +
-
-			"?page=" + pageURL +
-			"&title=" + pageTitle +
-			"&name=" + name +
-			"&email=" + email;
-
-			window.open(formURL, "_blank");
-			}
 			// /*]]>*/</script>
                                 </div>
                             </div>
